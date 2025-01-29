@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'El Messiri', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000 url(./images/Background.jpg) no-repeat center center/cover;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4), 0 -3px 10px rgba(255, 255, 255, 0.1) inset;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  display: none;
+  transform: perspective(1000px) rotateX(0deg);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.9;
+}
+
+.card.active {
+  display: block;
+  transform: perspective(1000px) translateZ(20px);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.card h2:hover {
+  color: #ffd700;
+  text-shadow: 0 0 15px #ffd700;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 30px; /* Adjusted padding to make space for icons */
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.form-group input:focus {
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.form-group .icon {
+  position: absolute;
+  left: 12px; /* Icon aligned to the left inside the input */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ffd700;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffd700, #ffcc33);
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 223, 102, 0.6);
+}
+
+.switch {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.switch a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.links a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
